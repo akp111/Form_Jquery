@@ -15,6 +15,14 @@ $(document).ready(function () {
         }
 
     }
+    function checkEmail() {
+        if ($("#email").val() == ''||$("#email").val().indexOf('@') == -1) {
+            $("#email").css("border-color", "#FF0000");
+            $('#submit').attr('disabled', true);
+            $("#error_email").text("* Enter Valid Email");
+        }
+
+    }
     function checkDOB() {
 
         if ($("#dob").val() == '') {
